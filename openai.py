@@ -10,3 +10,4 @@ def imageGen(prompt,n):
   )
   image_url = response['data'][0]['url']
   return image_url
+  
