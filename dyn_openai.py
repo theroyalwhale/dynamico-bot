@@ -1,6 +1,11 @@
 
 import openai
-openai.api_key = "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"
+import os
+
+def openKey(n):
+  for i in range(1,n+1):
+    openai.api_key = os.getenv("openaiKey-"+str(i))
+
 
 def imageGen(prompt,n):
   response = openai.Image.create(
